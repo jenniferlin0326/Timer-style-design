@@ -1,0 +1,419 @@
+//共用
+body
+  margin: 0
+.timerBox
+  align-self: center
+#countDown
+  padding: 10px 30px
+  box-sizing: border-box
+  display: block
+  width: 500px
+  font-size: 60px
+  margin: 0 auto
+  text-align: center
+  line-height: 1.6em
+  height: 110px
+  border-top-right-radius: 5px
+  border-top-left-radius: 5px
+  border-style: solid
+  border-width: 1px
+
+.btnBox
+  display: flex
+  flex-wrap: wrap
+  width: 500px
+  margin: 0 auto
+
+.Btn
+  transition: .5s ease
+  width: calc(100% / 3)
+  display: block
+  padding: 15px 10px
+  cursor: pointer
+  border-style: solid
+  border-width: 1px
+  &:first-child, &:last-child
+    width: 33%
+  &:nth-child(2)
+    width: 34%
+  &:focus
+    outline: none
+.startBtn
+  border-bottom-left-radius: 5px
+  border-right: none
+.resetBtn
+  border-bottom-right-radius: 5px
+  border-left: none
+
+.styleBtn
+  display: block
+  transition: .5s ease
+  width: 100px
+  text-align: center
+  margin: 5px auto
+  padding: 5px 0px
+  font-size: 13px
+  &:hover
+    cursor: pointer
+  &:focus
+    outline: none
+.cardBox
+  width: 100%
+  padding: 10px 0
+  margin-top: 40px
+  text-align: center
+.cardBox-title
+  font-size: 15px
+  padding-bottom: 10px
+.styleCard
+  transition: .5s ease
+  display: inline-block
+  width: 30px
+  height: 30px
+  margin-left: 5px
+  cursor: pointer
+  opacity: 0.8
+  &:focus
+    outline: none
+    &:before
+      border: 12px solid rgba(255,255,255,0.2) 
+      opacity: 1
+  &:before
+    transition: .5s
+    content: ''
+    opacity: 0
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0px
+    left: 0px
+    box-sizing: border-box
+    border-radius: 50%
+    border: 0px solid rgba(255,255,255,0.2) 
+  &:hover
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4)
+    opacity: 1
+    &:before
+      border: 12px solid rgba(255,255,255,0.2) 
+      opacity: 1
+    
+.styleCard.cardStyle_1
+  background-color: #4a9dd4
+.styleCard.cardStyle_2
+  background-color: #505aa7
+.styleCard.cardStyle_3
+  background-color: #fb3f72
+.styleCard.cardStyle_4
+  background-color: #58281d
+.styleCard.cardStyle_5
+  background-color: white
+  &:hover
+    &:before
+      border: 12px solid rgba(0,0,0,0.1) 
+      opacity: 1
+  &:focus
+    &:before
+      border: 12px solid rgba(0,0,0,0.1) 
+      opacity: 1
+//樣式一 
+.style1
+  background-image: url(https://visualhunt.com/photos/7/texture-wood-background.jpg?s=l)
+  background-size: 100%
+  background-position: center 20%
+  background-repeat: no-repeat
+  display: flex
+  flex-wrap: wrap
+  height: -webkit-fill-available
+  padding: 10px 20%
+  justify-content: center
+  .timerBox
+  align-self: center
+  #countDown
+    background-color: rgba(47, 47, 56, 0.8)
+    color: #4a9dd4
+    border-color: rgba(113, 110, 138, 0.64) rgb(58, 58, 74) rgb(48, 48, 58)
+    font-family: 'Julius Sans One', sans-serif
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4)
+
+  .Btn
+    background-color: rgba(47, 47, 56, 0.8)
+    color: #a7a7b1
+    border-color: rgb(83, 82, 93) rgb(65, 65, 76) rgb(24, 24, 29)
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2)
+    font-family: 'Julius Sans One', sans-serif
+    &:hover
+      background-color: rgba(39, 39, 47,0.8)
+      border-color: rgb(46, 45, 56) rgb(42, 42, 53) rgb(11, 11, 14)
+      color: #4a9dd4
+      box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4)
+
+  .styleBtn
+    background-color: rgba(0,0,0,0)
+    border: none
+    color: #a7a7b1
+    border-bottom: 1px #a7a7b1 solid
+    font-family: 'Julius Sans One', sans-serif
+    &:hover
+      color: #4a9dd4
+      border-bottom: 1px #4a9dd4 solid
+  .cardBox
+    font-family: 'Julius Sans One', sans-serif
+  .cardBox-title
+    color: #fff
+  .styleCard
+    position: relative
+    border: none
+    border-radius: 50%
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.4)
+
+//樣式二
+.style2
+  background-image: url(https://visualhunt.com/photos/7/blue-berry-plated-meal.jpg?s=l)
+  background-size: 100%
+  background-position: center 50%
+  background-repeat: no-repeat
+  display: flex
+  flex-wrap: wrap
+  height: -webkit-fill-available
+  padding: 10px 20%
+  justify-content: center
+  .timerBox
+  align-self: center
+  #countDown
+    background-color: rgba(255,255,255,0.7)
+    color: #5f81c7
+    font-size: 70px
+    height: auto
+    line-height: 1.5em
+    border-color: white #cfcfd6 #d8d8d8
+    border-bottom: none
+    font-family: 'Source Serif Pro', serif
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4)
+
+  .Btn
+    background-color: rgba(255,255,255,0.7)
+    color: #5f81c7
+    border-color: rgba(255,255,255,0.9) #cfcfd6 #d8d8d8
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2)
+    font-family: 'Source Serif Pro', serif
+    &:hover
+      background-color: rgba(255,255,255,0.9)
+      border-color: #f9f8f8 #efefef #c1c1c1
+      color: #5f81c7
+      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4)
+
+  .styleBtn
+    color: #a7a7b1
+    background-color: rgba(0,0,0,0)
+    border: none
+    color: #a7a7b1
+    border-bottom: 1px #a7a7b1 solid
+    font-family: 'Source Serif Pro', serif
+    &:hover
+      color: #4a9dd4
+      border-bottom: 1px #4a9dd4 solid
+  .cardBox
+    font-family: 'Source Serif Pro', serif
+  .cardBox-title
+    color: #fff
+  .styleCard
+    position: relative
+    border: none
+    border-radius: 50%
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.4)
+  .styleCard.cardStyle_3
+      background-color: #a7255b
+//樣式三
+.style3
+  background-image: url(https://visualhunt.com/photos/1/close-up-of-pink-rose.jpg?s=l)
+  background-size: 100%
+  background-position: center 50%
+  background-repeat: no-repeat
+  display: flex
+  flex-wrap: wrap
+  height: -webkit-fill-available
+  padding: 10px 20%
+  justify-content: center
+  &:before
+    background-color: rgba(199, 3, 67, 0.62)
+    content: ''
+    display: block
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    position: absolute
+    z-index: 1
+  .timerBox
+    align-self: center
+    z-index: 10
+  #countDown
+    color: #fff
+    border: none
+    font-family: 'Kaushan Script', cursive   
+  .Btn
+    background-color: rgba(255,255,255,0.5)
+    color: #c12751
+    border-color: rgba(255,255,255,0.1)
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2)
+    font-family: 'Kaushan Script', cursive
+    &:first-child
+      border-top-left-radius: 5px
+    &:last-child
+      border-top-right-radius: 5px
+    &:hover
+      background-color: rgba(255,255,255,0.7)
+      border-color: #f9f8f8 #efefef #c1c1c1
+      color: #fb3f72
+      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4)
+
+  .styleBtn
+    background-color: rgba(0,0,0,0)
+    border: none
+    color: #b1a7aa
+    border-bottom: 1px #b1a7aa solid
+    font-family: 'Julius Sans One', sans-serif
+    &:hover
+      color: #fb3f72
+      border-bottom: 1px #fb3f72 solid
+  .cardBox
+    font-family: 'Kaushan Script', cursive
+  .cardBox-title
+    color: #fff
+  .styleCard
+    position: relative
+    border: none
+    border-radius: 50%
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.4)
+//樣式四
+.style4
+  background-image: url(https://visualhunt.com/photos/9/crema-jear-cream.jpg?s=xl)
+  background-size: 100%
+  background-position: center 50%
+  background-repeat: no-repeat
+  display: flex
+  flex-wrap: wrap
+  height: -webkit-fill-available
+  padding: 10px 20%
+  justify-content: center
+  &:before
+    background-color: rgba(70, 26, 13, 0.62)
+    content: ''
+    display: block
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    position: absolute
+    z-index: 1
+  .timerBox
+    align-self: center
+    z-index: 10
+  #countDown
+    background-color: rgba(0,0,0,0.2)
+    color: #d6c094
+    border-color: rgba(255,255,255,0)
+    border-bottom: none
+    font-family: 'Playball', cursive
+    letter-spacing: 3px
+    font-size: 80px
+    height: auto
+    line-height: 1.6em
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2)
+
+  .Btn
+    background-color: rgba(0,0,0,0.2)
+    color: #d6c094
+    border-color: rgba(255,255,255,0.1)
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2)
+    font-family: 'Playball', cursive
+    &:hover
+      background-color: rgba(0,0,0,0.5)
+      color: #ffdf8f
+      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4)
+      border-color: rgba(0,0,0,0.2)
+
+  .styleBtn
+    background-color: rgba(0,0,0,0)
+    border: none
+    color: rgba(156, 103, 68, 0.9)
+    border-bottom: 1px rgba(156, 103, 68, 0.9) solid
+    font-family: 'Playball', cursive
+    &:hover
+      color: #d2ad51
+      border-bottom: 1px #d2ad51 solid
+  .cardBox
+    font-family: 'Playball', cursive
+  .cardBox-title
+    color: rgba(156, 103, 68, 0.9)
+  .styleCard
+    position: relative
+    border: none
+    border-radius: 50%
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.4)
+//樣式五
+.style5
+  background-image: url(https://visualhunt.com/photos/9/ready-for-type-paint-joannakosinska.jpg?s=l)
+  background-size: 100%
+  background-position: center 50%
+  background-repeat: no-repeat
+  display: flex
+  flex-wrap: wrap
+  height: -webkit-fill-available
+  padding: 10px 20%
+  justify-content: center
+  &:before
+    background-color: rgba(255,255,255, 0.4)
+    content: ''
+    display: block
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    position: absolute
+    z-index: 1
+  .timerBox
+    align-self: center
+    z-index: 10
+  #countDown
+    // background-color: rgba(0,0,0,0.2)
+    color: #a2a2a2
+    font-size: 90px
+    height: auto
+    line-height: 1.3em
+    border: none
+    border-bottom: none
+    font-family: 'Julius Sans One', sans-serif
+  .Btn
+    background-color: rgba(0,0,0,0.2)
+    color: #fff
+    border-color: rgba(0,0,0,0.1)
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
+    font-family: 'Julius Sans One', sans-serif
+    &:first-child
+      border-top-left-radius: 5px
+    &:last-child
+      border-top-right-radius: 5px
+    &:hover
+      background-color: rgba(0,0,0,0.3)
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4)
+      border-color: rgba(0,0,0,0.2)
+      color: #dedede
+  .styleBtn
+    background-color: rgba(0,0,0,0)
+    border: none
+    color: #a2a2a2
+    border-bottom: 1px #a2a2a2 solid
+    font-family: 'Julius Sans One', sans-serif
+    &:hover
+      color: #dedede
+      border-bottom: 1px #dedede solid
+  .cardBox
+    font-family: 'Julius Sans One', sans-serif
+  .cardBox-title
+    color: #a2a2a2
+  .styleCard
+    position: relative
+    border: none
+    border-radius: 50%
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.4)

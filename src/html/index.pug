@@ -1,0 +1,26 @@
+doctype html
+html(lang="zh-tw" data-git=htmlWebpackPlugin.options.git data-rev=htmlWebpackPlugin.options.rev)
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title practice
+    link(href='https://fonts.googleapis.com/css?family=Julius+Sans+One|Orbitron|Righteous|Comfortaa|Kaushan+Script|Shrikhand|Source+Serif+Pro|Quando|playball', rel='stylesheet')
+  body
+    #styleBox.style2
+      .timerBox
+        span#countDown
+        .btnBox
+          button#startBtn.Btn.startBtn
+            | START
+          button#pauseBtn.Btn.pauseBtn
+            | PAUSE
+          button#resetBtn.Btn.resetBtn
+            | RESET
+        .cardBox
+          .cardBox-title Choose Template Style
+          button#cardStyle_1.styleCard.cardStyle_1
+          button#cardStyle_2.styleCard.cardStyle_2
+          button#cardStyle_3.styleCard.cardStyle_3
+          button#cardStyle_4.styleCard.cardStyle_4
+          button#cardStyle_5.styleCard.cardStyle_5
+        button#styleBtn.styleBtn Random Style

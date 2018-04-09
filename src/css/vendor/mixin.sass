@@ -1,0 +1,56 @@
+@mixin bg($color)
+  background: $color
+@mixin text-a($a: center)
+  text-align: $a
+
+/*盒子系列
+//*置中
+@mixin width($wid: 350px,$mg: 0 auto)
+  width: $wid
+  margin: $mg
+//*flex
+@mixin flex($d: flex,$w: wrap)
+  display: $d
+  flex-wrap: $w
+//*寬/個數
+@mixin box($w: 100%,$i: 1)
+  width: $w / $i
+//*邊寬均分
+@mixin padding($p: 4px 2px,$i: 3,$p-r: 4px,$p-l: 4px)
+  padding: $p
+  &:nth-child(#{$i}n+1)
+    padding-left: $p-l
+    padding-right: 0
+  &:nth-child(#{$i}n)
+    padding-left: 0
+    padding-right: $p-r
+@mixin ani-delay($i,$s)
+  &:first-child
+    animation-delay: 0s
+  &:nth-child(2)
+    animation-delay: calc(#{$s} / #{$i} * 1s)
+  &:nth-child(3)
+    animation-delay: calc( #{$s} / #{$i} * 2s)
+  &:nth-child(4)
+    animation-delay: calc( #{$s} / #{$i} * 3s)
+/*效果
+@mixin trans($s: .5s,$type: ease)
+  transition: $s $type
+
+//@mixin for keyframe
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+//@mixin for animation
+=animation($content)
+  -webkit-animation: $content
+  -moz-animation: $content
+  -o-animation: $content
+  animation: $content
